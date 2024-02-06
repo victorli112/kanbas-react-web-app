@@ -1,0 +1,15 @@
+.course-status-button {
+  padding: 5px;
+  border: 1px solid black;
+  background-color: #f2eeed;
+  border-radius: 3px;
+  vertical-align: top !important;
+  width: 100%;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+.green {
+  background-color: #83af85;
+  color: white;
+}

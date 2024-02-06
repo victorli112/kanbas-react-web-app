@@ -1,27 +1,70 @@
 <html>
-  <head></head>
-  <body>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/Status/index.css" />
+  </head>
+  <body style="width: 50vw">
     <h4>Course Status</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <button>Unpublish</button>
-          </td>
-          <td>
-            <button>Published</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="d-flex">
+      <button class="course-status-button" style="width: 50%">
+        <i class="fa-regular fa-circle-xmark"></i> Unpublish
+      </button>
+      <button class="course-status-button green" style="width: 50%">
+        <i class="fa-regular fa-circle-check"></i> Published
+      </button>
+    </div>
+    <br />
+    <a href="#">
+      <button class="course-status-button">
+        <i class="fa-solid fa-file-import"></i> Import Existing Content
+      </button></a
+    >
+    <br />
+    <a href="#">
+      <button class="course-status-button">
+        <i class="fa-solid fa-right-from-bracket"></i> Import From Commons
+      </button></a
+    ><br />
+    <a href="#">
+      <button class="course-status-button">
+        <i class="fa-solid fa-arrow-pointer"></i> Choose Home page
+      </button></a
+    ><br />
+    <a href="#">
+      <button class="course-status-button">
+        <i class="fa-solid fa-chart-simple"></i> View Course Stream
+      </button></a
+    ><br />
+    <a href="#">
+      <button class="course-status-button">
+        <i class="fa-solid fa-bullhorn"></i> New Announcement
+      </button></a
+    ><br />
+    <a href="#">
+      <button class="course-status-button">
+        <i class="fa-solid fa-chart-simple"></i> New Analytics
+      </button></a
+    ><br />
+    <a href="#">
+      <button class="course-status-button">
+        <i class="fa-regular fa-bell"></i> View course Notifications
+      </button></a
+    >
+    <h4 style="font-weight: bold">Coming Up</h4>
+    <a href="#"> View Calendar</a>
     <ul>
-      <li><a href="#"> Import Existing Content</a></li>
-      <li><a href="#"> Import From Commons</a></li>
-      <li><a href="#"> Choose Home page</a></li>
-      <li><a href="#"> View Course Stream</a></li>
-      <li><a href="#"> New Announcement</a></li>
-      <li><a href="#"> New Analytics</a></li>
-      <li><a href="#"> View course Notifications</a></li>
+      <li><a href="#"> Lecture 1</a></li>
+      <li><a href="#"> Lecture 2</a></li>
+      <li><a href="#"> Lecture 3</a></li>
     </ul>
   </body>
 </html>

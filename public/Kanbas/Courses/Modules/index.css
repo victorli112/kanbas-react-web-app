@@ -61,3 +61,51 @@
 .admin-buttons-top tr td {
   padding: 0px 0px 0px 5px;
 }
+
+.top-nav-bar {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.nav-buttons {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  background: black;
+  color: white;
+}
+
+.hidden-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  color: red;
+  z-index: 9999;
+}
+
+.hidden-kambas-navigation {
+  width: 100%;
+  list-style: none;
+  padding: 10px;
+  margin: 0px;
+  text-align: left;
+}
+
+.hidden-kambas-navigation li {
+  padding-bottom: 5%;
+}
+.hidden-kambas-navigation a {
+  text-decoration: none;
+  color: red;
+}
+
+.hidden-course-nav li {
+  padding: 0px;
+  margin: 0px;
+}
