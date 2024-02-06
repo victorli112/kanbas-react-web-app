@@ -13,3 +13,15 @@
   background-color: #83af85;
   color: white;
 }
+
+.todo-coming-up ul {
+  padding: 0px;
+}
+.todo-coming-up a {
+  text-decoration: none;
+  color: red;
+}
+
+.todo-coming-up li {
+  list-style-type: none;
+}
