@@ -11,7 +11,6 @@ function ArrowFunctions() {
       threeMinusOne = {threeMinusOne}
       <br />
       subtract(3, 1) = {subtract(3, 1)}
-      <br />
     </>
   );
 }

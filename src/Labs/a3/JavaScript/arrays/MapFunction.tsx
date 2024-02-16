@@ -7,7 +7,6 @@ function MapFunction() {
   return (
     <>
       <h3>Map</h3>
-      <br />
       squares = {squares}
       <br />
       cubes = {cubes}

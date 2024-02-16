@@ -11,7 +11,6 @@ function VariablesAndConstants() {
       blockScoped = {blockScoped}
       <br />
       constant1 = {constant1}
-      <br />
     </div>
   );
 }

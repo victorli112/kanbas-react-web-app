@@ -9,7 +9,6 @@ function TemplateLiterals() {
   return (
     <>
       <h3> Template Literals</h3>
-      <br />
       result1 = {result1}
       <br />
       result2 = {result2}

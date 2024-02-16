@@ -22,7 +22,6 @@ function VariableTypes() {
       isString = {isString}
       <br />
       isBoolean = {isBoolean}
-      <br />
     </div>
   );
 }

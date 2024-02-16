@@ -7,7 +7,6 @@ function FindIndex() {
   return (
     <>
       <h3>FindIndex function</h3>
-      <br />
       fourIndex = {fourIndex}
       <br />
       string3Index = {string3Index}

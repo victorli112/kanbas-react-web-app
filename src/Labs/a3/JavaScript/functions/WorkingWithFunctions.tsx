@@ -6,10 +6,10 @@ import FunctionParenthesisAndParameters from "./FunctionParenthesisAndParameters
 function WorkingWithFunctions() {
   return (
     <>
-      <ES5Functions />;
-      <ArrowFunctions />;
-      <ImpliedReturns />;
-      <FunctionParenthesisAndParameters />;
+      <ES5Functions />
+      <ArrowFunctions />
+      <ImpliedReturns />
+      <FunctionParenthesisAndParameters />
     </>
   );
 }

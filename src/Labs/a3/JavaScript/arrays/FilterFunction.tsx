@@ -6,7 +6,6 @@ function FilterFunction() {
   return (
     <>
       <h3>Filter function</h3>
-      <br />
       numbersGreaterThan2 = {numbersGreaterThan2}
       <br />
       evenNumbers = {evenNumbers}

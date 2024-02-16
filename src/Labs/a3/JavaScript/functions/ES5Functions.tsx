@@ -12,7 +12,6 @@ function ES5Functions() {
       twoPlusFour = {twoPlusFour}
       <br />
       add(2, 4) = {add(2, 4)}
-      <br />
     </>
   );
 }

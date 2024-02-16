@@ -8,7 +8,6 @@ function ForLoops() {
   return (
     <>
       <h3>Looping through arrays</h3>
-      <br />
       stringArray2 = {stringArray2}
     </>
   );

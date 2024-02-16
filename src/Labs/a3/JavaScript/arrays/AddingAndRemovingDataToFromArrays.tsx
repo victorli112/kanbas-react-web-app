@@ -8,7 +8,6 @@ function AddingAndRemovingDataToFromArrays() {
   return (
     <>
       <h3>Add and remove data to arrays</h3>
-      <br />
       numberArray1 = {numberArray1}
       <br />
       stringArray1 = {stringArray1}

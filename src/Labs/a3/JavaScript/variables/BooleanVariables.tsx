@@ -19,7 +19,7 @@ function BooleanVariables() {
       true3 = {true3 + ""} <br />
       true4 = {true4 + ""} <br />
       true5 = {true5 + ""} <br />
-      false3 = {false3 + ""} <br />
+      false3 = {false3 + ""}
     </div>
   );
 }
