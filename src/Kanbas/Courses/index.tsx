@@ -33,7 +33,7 @@ function Courses() {
       </div>
       <hr style={{ margin: "8px" }} />
       <CourseNavigation />
-      <div className="overflow-y-scroll position-fixed bottom-0 end-0 course-content-block">
+      <div className="overflow-y-scroll position-absolute bottom-0 end-0 course-content-block">
         <Routes>
           <Route path="/" element={<Navigate to="Home" />} />
           <Route path="Home" element={<Home />} />
