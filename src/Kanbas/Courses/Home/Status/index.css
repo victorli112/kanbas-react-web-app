@@ -8,20 +8,28 @@
   margin-bottom: 3px;
   text-align: left;
 }
+.course-status h4 {
+  font-weight: bold;
+}
+
+.course-status hr {
+  margin: 0px;
+}
 
 .green {
   background-color: #83af85;
   color: white;
 }
 
-.todo-coming-up ul {
+.course-status ul {
   padding: 0px;
 }
-.todo-coming-up a {
+
+.course-status a {
   text-decoration: none;
   color: red;
 }
 
-.todo-coming-up li {
+.course-status li {
   list-style-type: none;
 }

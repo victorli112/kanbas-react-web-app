@@ -1,12 +1,31 @@
 import "./index.css";
 
 function Status() {
+  const statusButtons = [
+    { icon: "fa-file-import", text: "Import Existing Content", link: "#" },
+    { icon: "fa-right-from-bracket", text: "Import From Commons", link: "#" },
+    { icon: "fa-arrow-pointer", text: "Choose Home page", link: "#" },
+    { icon: "fa-chart-simple", text: "View Course Stream", link: "#" },
+    { icon: "fa-bullhorn", text: "New Announcement", link: "#" },
+    { icon: "fa-chart-simple", text: "New Analytics", link: "#" },
+    { icon: "fa-bell", text: "View course Notifications", link: "#" },
+  ];
+  const todoList = [
+    { text: "Homework 1", link: "#" },
+    { text: "Homework 2", link: "#" },
+  ];
+  const comingUpList = [
+    { text: "Lecture 1", link: "#" },
+    { text: "Lecture 2", link: "#" },
+    { text: "Lecture 3", link: "#" },
+  ];
+
   return (
     <div
-      className="flex-grow-0 me-2 d-none d-lg-block"
+      className="flex-grow-0 me-2 d-none d-lg-block course-status"
       style={{ width: "300px" }}
     >
-      <h4>Course Status</h4>
+      <h3>Course Status</h3>
       <div className="d-flex">
         <button className="course-status-button" style={{ width: "50%" }}>
           <i className="fa-regular fa-circle-xmark"></i> Unpublish
@@ -16,85 +35,44 @@ function Status() {
         </button>
       </div>
       <br />
-      <a href="#">
-        <button className="course-status-button">
-          <i className="fa-solid fa-file-import"></i> Import Existing Content
-        </button>
-      </a>
-      <br />
-      <a href="#">
-        <button className="course-status-button">
-          <i className="fa-solid fa-right-from-bracket"></i> Import From Commons
-        </button>
-      </a>
-      <br />
-      <a href="#">
-        <button className="course-status-button">
-          <i className="fa-solid fa-arrow-pointer"></i> Choose Home page
-        </button>
-      </a>
-      <br />
-      <a href="#">
-        <button className="course-status-button">
-          <i className="fa-solid fa-chart-simple"></i> View Course Stream
-        </button>
-      </a>
-      <br />
-      <a href="#">
-        <button className="course-status-button">
-          <i className="fa-solid fa-bullhorn"></i> New Announcement
-        </button>
-      </a>
-      <br />
-      <a href="#">
-        <button className="course-status-button">
-          <i className="fa-solid fa-chart-simple"></i> New Analytics
-        </button>
-      </a>
-      <br />
-      <a href="#">
-        <button className="course-status-button">
-          <i className="fa-regular fa-bell"></i> View course Notifications
-        </button>
-      </a>
-      <div className="todo-coming-up">
-        <h4 style={{ fontWeight: "bold" }}>To Do</h4>
-        <hr style={{ margin: "0px" }} />
+      {statusButtons.map((button) => (
+        <a href={button.link}>
+          <button className="course-status-button">
+            <i className={`fa-solid ${button.icon}`}></i> {button.text}
+          </button>
+        </a>
+      ))}
+      <div className="todo-list">
+        <h4>To Do</h4>
+        <hr />
         <ul>
-          <li>
-            <a href="#"> Homework 1</a>
-          </li>
+          {todoList.map((todoItem) => (
+            <li>
+              <a href={todoItem.link}>{todoItem.text}</a>
+            </li>
+          ))}
         </ul>
-        <div className="d-flex bd-highlight">
-          <div className="p-2 flex-grow-1 bd-highlight">
-            <h4 style={{ fontWeight: "bold" }}>Coming Up</h4>
+      </div>
+      <div className="coming-up">
+        <div className="row no-gutters justify-content-between">
+          <div className="col">
+            <h4>Coming Up</h4>
           </div>
-          <div className="p-2 bd-highlight">
+          <div className="col">
             <a href="#">
               <i className="fa-regular fa-calendar"></i> View Calendar
             </a>
           </div>
         </div>
-        <hr style={{ margin: "0px" }} />
+        <hr />
         <ul>
-          <li>
-            <a href="#">
-              {" "}
-              <i className="fa-regular fa-calendar"></i> Lecture 1
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              {" "}
-              <i className="fa-regular fa-calendar"></i> Lecture 2
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              {" "}
-              <i className="fa-regular fa-calendar"></i> Lecture 3
-            </a>
-          </li>
+          {comingUpList.map((comingUpItem) => (
+            <li>
+              <a href={comingUpItem.link}>
+                <i className="fa-regular fa-calendar"></i> {comingUpItem.text}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

@@ -2,6 +2,8 @@ import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { MdOutlineEditNote } from "react-icons/md";
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../Database";
+import ToolbarButtons from "./Buttons";
+import "./index.css";
 function Assignments() {
   const { courseId } = useParams();
   const assignmentList = assignments.filter(
@@ -9,12 +11,14 @@ function Assignments() {
   );
   return (
     <>
-      {/*Buttons and other fields */}
+      <ToolbarButtons />
+      <hr />
       <ul className="list-group wd-modules">
         <li className="list-group-item">
           <div>
             <FaEllipsisV className="me-2" /> Assignments
             <span className="float-end">
+              <div className="assignment-weight">40% of total</div>{" "}
               <FaCheckCircle className="text-success" />
               <FaPlusCircle className="ms-2" />
               <FaEllipsisV className="ms-2" />

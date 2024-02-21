@@ -18,7 +18,7 @@ function HomeButtons() {
             </select>
           </td>
           <td>
-            <button className="add-module-button">+ Module</button>
+            <button className="red-admin-button">+ Module</button>
           </td>
           <td>
             <button className="admin-button">

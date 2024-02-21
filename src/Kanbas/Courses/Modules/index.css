@@ -32,7 +32,7 @@
 }
 
 .admin-button {
-  padding: 5px;
+  padding: 6px;
   border: 1px solid black;
   background-color: #f2eeed;
   border-radius: 3px;
@@ -40,8 +40,8 @@
   vertical-align: top !important;
 }
 
-.add-module-button {
-  padding: 5px;
+.red-admin-button {
+  padding: 6px;
   height: 100%;
   border: 1px solid gray;
   border-radius: 3px;
@@ -50,7 +50,8 @@
 }
 
 .top-buttons {
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   overflow: auto;
 }
 
@@ -60,6 +61,11 @@
 
 .admin-buttons-top tr td {
   padding: 0px 0px 0px 5px;
+}
+
+.top-admin-buttons {
+  float: right;
+  overflow: hidden;
 }
 
 .top-nav-bar {
@@ -108,4 +114,11 @@
 .hidden-course-nav li {
   padding: 0px;
   margin: 0px;
+}
+
+.assignment-weight {
+  display: inline;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px;
 }
