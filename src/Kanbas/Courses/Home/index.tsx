@@ -1,8 +1,6 @@
 import ModuleList from "../Modules/List";
 import Status from "./Status";
 import NavBar from "./SmallResponsive/NavBar";
-import HamburgerDropdown from "./SmallResponsive/HamburgerDropdown";
-import ArrowDropdown from "./SmallResponsive/ArrowDropdown";
 import HomeButtons from "./Buttons";
 
 function Home() {
@@ -24,9 +22,6 @@ function Home() {
         </ul>
       </div>
       <Status />
-      {/* Hidden Components for small screens */}
-      <HamburgerDropdown />
-      <ArrowDropdown />
     </div>
   );
 }
