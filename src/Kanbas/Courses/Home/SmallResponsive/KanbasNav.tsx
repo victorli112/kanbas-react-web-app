@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Context } from "./NavBar";
 
-function KanbasNav({}) {
+function KanbasNav() {
   const nav: any = useContext(Context);
   const links = [
     {

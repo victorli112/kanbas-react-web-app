@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Context } from "./NavBar";
 
-function CourseNav() {
+function CourseNav({ courseName }: { courseName: any }) {
   const nav: any = useContext(Context);
   const links = [
     {
@@ -45,7 +45,7 @@ function CourseNav() {
           <div></div>
           <div>
             <h3>
-              CS4550.12631.232141
+              {courseName}
               <br />
               Modules
             </h3>

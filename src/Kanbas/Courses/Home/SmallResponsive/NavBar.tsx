@@ -6,7 +6,7 @@ import React from "react";
 
 export const Context = React.createContext({});
 
-function NavBar() {
+function NavBar({ courseName }: { courseName: any }) {
   const [kanbasNav, setKanbasNav] = useState(false);
   const [courseNav, setCourseNav] = useState(false);
 
@@ -23,7 +23,7 @@ function NavBar() {
           </div>
           <div>
             <h3>
-              CS4550.12631.232141
+              {courseName}
               <br />
               Modules
             </h3>
@@ -46,7 +46,7 @@ function NavBar() {
           fullscreen={true}
           onHide={() => setCourseNav(false)}
         >
-          <CourseNav />
+          <CourseNav courseName={courseName} />
         </Modal>
       </div>
     </Context.Provider>
