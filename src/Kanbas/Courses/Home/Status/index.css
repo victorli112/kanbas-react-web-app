@@ -1,0 +1,35 @@
+.course-status-button {
+  padding: 5px;
+  border: 1px solid black;
+  background-color: #f2eeed;
+  border-radius: 3px;
+  vertical-align: top !important;
+  width: 100%;
+  margin-bottom: 3px;
+  text-align: left;
+}
+.course-status h4 {
+  font-weight: bold;
+}
+
+.course-status hr {
+  margin: 0px;
+}
+
+.green {
+  background-color: #83af85;
+  color: white;
+}
+
+.course-status ul {
+  padding: 0px;
+}
+
+.course-status a {
+  text-decoration: none;
+  color: red;
+}
+
+.course-status li {
+  list-style-type: none;
+}
