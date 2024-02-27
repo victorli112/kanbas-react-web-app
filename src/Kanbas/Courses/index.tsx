@@ -27,7 +27,7 @@ function Courses() {
           <i className="fa-solid fa-greater-than"></i>
           <span className="path-name">
             {" "}
-            {pathname.split("/").pop()?.replace("%20", " ")}{" "}
+            {pathname.split("/").pop()?.replace("%20", " ")}
           </span>
         </h3>
       </div>
