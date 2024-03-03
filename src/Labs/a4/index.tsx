@@ -9,6 +9,7 @@ import DateStateVariable from "./state_variables/DateStateVariable";
 import ObjectStateVariable from "./state_variables/ObjectStateVariable";
 import ArrayStateVariable from "./state_variables/ArrayStateVariable";
 import ParentStateComponent from "./shared_state/ParentStateComponent";
+import ReduxExamples from "./ReduxExamples";
 
 function Assignment4() {
   function sayHello() {
@@ -17,6 +18,8 @@ function Assignment4() {
 
   return (
     <>
+      <h1> Assignment 4 </h1>
+      <ReduxExamples />
       <ClickEvent />
       <PassingDataOnEvent />
       <PassingFunctions theFunction={sayHello} />
