@@ -141,3 +141,7 @@
 .flex-row-reverse {
   padding: 0px !important;
 }
+
+.module-update-form {
+  width: 50%;
+}

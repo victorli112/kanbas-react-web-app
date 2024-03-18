@@ -24,7 +24,7 @@ function ModuleList() {
 
   return (
     <>
-      <div className="form-group">
+      <div className="form-group module-update-form">
         <input
           className="form-control"
           value={module.name}
