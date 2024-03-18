@@ -122,3 +122,26 @@
   border-radius: 15px;
   padding: 5px;
 }
+
+.form-group > * {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.module-list-edit-btn {
+  padding: 1px 5px !important;
+  margin-left: 5px;
+  font-size: 13px !important;
+}
+
+.flex-row-reverse {
+  padding: 0px !important;
+}
+
+.module-update-form {
+  width: 50%;
+}

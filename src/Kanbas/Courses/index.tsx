@@ -1,4 +1,3 @@
-import { courses } from "../../Kanbas/Database";
 import {
   Navigate,
   Route,
@@ -13,10 +12,10 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import "./index.css";
 
-function Courses() {
+function Courses({ courses }: { courses: any }) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const course = courses.find((course) => course._id === courseId);
+  const course = courses.find((course: any) => course._id === courseId);
   return (
     <div>
       <div className="course-top-bar">
