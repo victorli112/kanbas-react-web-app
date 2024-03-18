@@ -24,28 +24,34 @@ function ModuleList() {
 
   return (
     <>
-      <ul className="list-group wd-modules">
-        <li className="list-group-item">
-          <button
-            onClick={() => dispatch(addModule({ ...module, course: courseId }))}
-          >
-            Add
-          </button>
-          <button onClick={() => dispatch(updateModule(module))}>Update</button>
-          <input
-            value={module.name}
-            onChange={(e) =>
-              dispatch(setModule({ ...module, name: e.target.value }))
-            }
-          />
-          <textarea
-            value={module.description}
-            onChange={(e) =>
-              dispatch(setModule({ ...module, description: e.target.value }))
-            }
-          />
-        </li>
-      </ul>
+      <div className="form-group">
+        <input
+          className="form-control"
+          value={module.name}
+          onChange={(e) =>
+            dispatch(setModule({ ...module, name: e.target.value }))
+          }
+        />
+        <textarea
+          className="form-control"
+          value={module.description}
+          onChange={(e) =>
+            dispatch(setModule({ ...module, description: e.target.value }))
+          }
+        ></textarea>
+        <button
+          className="btn btn-success"
+          onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+        >
+          Add
+        </button>
+        <button
+          className="btn btn-secondary"
+          onClick={() => dispatch(updateModule(module))}
+        >
+          Update
+        </button>
+      </div>
       {modulesList
         .filter((module) => module.course === courseId)
         .map((module) => (
@@ -53,11 +59,20 @@ function ModuleList() {
             className="list-group-item"
             onClick={() => setSelectedModule(module)}
           >
-            <button onClick={() => dispatch(setModule(module))}>Edit</button>
-
-            <button onClick={() => dispatch(deleteModule(module._id))}>
-              Delete
-            </button>
+            <div className="d-flex flex-row-reverse">
+              <button
+                className="btn btn-outline-secondary module-list-edit-btn"
+                onClick={() => dispatch(setModule(module))}
+              >
+                Edit
+              </button>
+              <button
+                className="btn btn-outline-danger module-list-edit-btn"
+                onClick={() => dispatch(deleteModule(module._id))}
+              >
+                Delete
+              </button>
+            </div>
             <div>
               <FaEllipsisV className="me-2" />
               {module.name}

@@ -1,0 +1,13 @@
+.course-update-form {
+  width: 25%;
+  margin-bottom: 20px;
+}
+
+.course-update-form > * {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.course-buttons > * {
+  margin-right: 5px;
+}
