@@ -11,11 +11,22 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import "./index.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function Courses({ courses }: { courses: any }) {
+function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const course = courses.find((course: any) => course._id === courseId);
+  const COURSES_API = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState<any>({ _id: "" });
+  const findCourseById = async (courseId?: string) => {
+    const response = await axios.get(`${COURSES_API}/${courseId}`);
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   return (
     <div>
       <div className="course-top-bar">
