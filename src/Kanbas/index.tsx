@@ -6,14 +6,14 @@ import KanbasNavigation from "./Navigation";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import { useState, useEffect } from "react";
-import { courses } from "./Database";
-import axios from "axios";
 import { Provider } from "react-redux";
 import store from "./store";
+import * as client from "./Courses/client";
 
 function Kanbas() {
   const [course, setCourse] = useState({
-    _id: "0",
+    _id: "",
+    id: "0",
     name: "New Course",
     number: "New Number",
     startDate: "2023-09-10",
@@ -21,35 +21,45 @@ function Kanbas() {
     image: "course.png",
   });
   const [courses, setCourses] = useState<any[]>([]);
-  const API_BASE = process.env.REACT_APP_API_BASE;
-  const COURSES_API = `${API_BASE}/api/courses`;
   const findAllCourses = async () => {
-    const response = await axios.get(COURSES_API);
-    setCourses(response.data);
+    const courses = await client.findAllCourses();
+    setCourses(courses);
   };
+  const addNewCourse = async () => {
+    try {
+      const response = await client.createCourse(course);
+      setCourses([...courses, response]);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const deleteCourse = async (course: any) => {
+    try {
+      await client.deleteCourse(course);
+      setCourses(courses.filter((c) => c._id !== course._id));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const updateCourse = async () => {
+    try {
+      await client.updateCourse(course);
+      setCourses(
+        courses.map((c) => {
+          if (c._id === course._id) {
+            return course;
+          }
+          return c;
+        })
+      );
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
     findAllCourses();
   }, []);
-
-  const addNewCourse = async () => {
-    const response = await axios.post(COURSES_API, course);
-    setCourses([...courses, response.data]);
-  };
-  const deleteCourse = async (courseId: string) => {
-    const response = await axios.delete(`${COURSES_API}/${courseId}`);
-    setCourses(courses.filter((c) => c._id !== courseId));
-  };
-  const updateCourse = async () => {
-    const response = await axios.put(`${COURSES_API}/${course._id}`, course);
-    setCourses(
-      courses.map((c) => {
-        if (c._id === course._id) {
-          return course;
-        }
-        return c;
-      })
-    );
-  };
 
   return (
     <Provider store={store}>
