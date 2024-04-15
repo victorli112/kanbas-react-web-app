@@ -12,7 +12,8 @@ import store from "./store";
 
 function Kanbas() {
   const [course, setCourse] = useState({
-    _id: "0",
+    _id: "",
+    id: "0",
     name: "New Course",
     number: "New Number",
     startDate: "2023-09-10",
@@ -26,11 +27,8 @@ function Kanbas() {
     const response = await axios.get(COURSES_API);
     setCourses(response.data);
   };
-  useEffect(() => {
-    findAllCourses();
-  }, []);
-
   const addNewCourse = async () => {
+    delete (course as any)._id;
     const response = await axios.post(COURSES_API, course);
     setCourses([...courses, response.data]);
   };
