@@ -20,7 +20,7 @@ function Courses() {
   const findCourseById = async (courseId?: string) => {
     if (!courseId) return;
     const response = await client.findCourseById(courseId);
-    setCourse(response[0]);
+    setCourse(response);
   };
   useEffect(() => {
     findCourseById(courseId);
