@@ -56,6 +56,9 @@ function Kanbas() {
       console.log(err);
     }
   };
+  useEffect(() => {
+    findAllCourses();
+  }, []);
 
   useEffect(() => {
     findAllCourses();
