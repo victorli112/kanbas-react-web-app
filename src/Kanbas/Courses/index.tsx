@@ -5,6 +5,7 @@ import {
   useLocation,
   useParams,
 } from "react-router-dom";
+import * as client from "./client";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
 import Modules from "./Modules";
@@ -12,22 +13,18 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import "./index.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 function Courses() {
   const { courseId } = useParams();
-  const { pathname } = useLocation();
-  const API_BASE = process.env.REACT_APP_API_BASE;
-  const COURSES_API = `${API_BASE}/api/courses`;
   const [course, setCourse] = useState<any>({ _id: "" });
   const findCourseById = async (courseId?: string) => {
-    const response = await axios.get(`${COURSES_API}/${courseId}`);
-    setCourse(response.data);
+    if (!courseId) return;
+    const response = await client.findCourseById(courseId);
+    setCourse(response);
   };
   useEffect(() => {
     findCourseById(courseId);
   }, [courseId]);
-
   return (
     <div>
       <div className="course-top-bar">
@@ -36,10 +33,7 @@ function Courses() {
           <HiMiniBars3 />
           <span className="course-name"> {course?.name} </span>
           <i className="fa-solid fa-greater-than"></i>
-          <span className="path-name">
-            {" "}
-            {pathname.split("/").pop()?.replace("%20", " ")}
-          </span>
+          <span className="path-name"> {courseId}</span>
         </h3>
       </div>
       <hr style={{ margin: "8px" }} />
