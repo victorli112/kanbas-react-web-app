@@ -112,7 +112,7 @@ function Dashboard({
                       className="btn btn-outline-secondary"
                       onClick={(event) => {
                         event.preventDefault();
-                        deleteCourse(course._id);
+                        deleteCourse(course);
                       }}
                     >
                       Delete
