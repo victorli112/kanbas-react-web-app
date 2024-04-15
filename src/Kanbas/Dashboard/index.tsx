@@ -73,7 +73,7 @@ function Dashboard({
                 >
                   <Link
                     className="card-title"
-                    to={`/Kanbas/Courses/${course._id}/Home`}
+                    to={`/Kanbas/Courses/${course.id}/Home`}
                     style={{
                       textDecoration: "none",
                       color: "navy",
@@ -94,7 +94,7 @@ function Dashboard({
                   </p>
                   <span className="course-buttons">
                     <Link
-                      to={`/Kanbas/Courses/${course._id}/Home`}
+                      to={`/Kanbas/Courses/${course.id}/Home`}
                       className="btn btn-primary"
                     >
                       Go{" "}
